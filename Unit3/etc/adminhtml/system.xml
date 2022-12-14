@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="rltsquare" translate="label" sortOrder="10">
+            <label>RLTSquare</label>
+        </tab>
+        <section id="unit3" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Unit 3</label>
+            <tab>rltsquare</tab>
+            <resource>RLTSquare_Unit3::unit3_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="1">
+                <label>Settings</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0"
+                       showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="username" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0"
+                       showInStore="1">
+                    <label>UserName</label>
+                    <comment>Enter Username</comment>
+                </field>
+                <field id='password' translate='label' type='password' sortOrder='3' showInDefault='1' showInWebsite='1'
+                       showInStore='1'>
+                    <label>Password</label>
+                </field>
+                <field id="dropdown" translate="label comment" sortOrder="6" type="select" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Environment</label>
+                    <source_model>RLTSquare\Unit3\Model\Config\Source\Dropdown</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
